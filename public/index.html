@@ -3,30 +3,59 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-
+    <!-- Roboto Condensed font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,700,700i" rel="stylesheet">
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
+    <!-- Nav CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" >
+    <!-- New Tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" >
+    <!-- FontAwesome Icon links -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <!-- Composer-char-count JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
-
   <body>
-
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png" width="80px" height="80px">
+      <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
     </nav>
-
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <section class="new-tweet">
+        <h2 class="compose-tweet">Compose Tweet</h2>
+        <form method="POST" action="/tweets">
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <input class="submit" type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
+
+      <section class="tweet-container">
+        <article class="tweet-article">
+          <header class="tweet-header">
+            <img class="tweet-image" src="images/KI.jpg">
+            <h2 class="tweetname">Kyrie Irving</h2>
+            <span class="username">@Kyrie2</span>
+          </header>
+          <p class="tweet-content">I am the best PG in the league!</p>
+          <footer class="tweet-footer">
+            <span class="tweet-footer-content">10 days ago.</span>
+            <i class="fas fa-flag"></i>
+            <i class="fas fa-sync"></i>
+            <i class="fas fa-heart"></i>
+          </footer>
+        </article>
+      </section>
+
     </main>
 
   </body>
