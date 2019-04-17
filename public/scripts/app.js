@@ -67,18 +67,23 @@ $(() => {
     $("#tweet-input").focus();
   });
 
+  $(".error-container").hide();
+
   let $form = $('#tweet-form');
   $form.on('submit', () => {
     event.preventDefault();
     let inputLength = $("#tweet-input").val().length;
     if(inputLength === 0 || inputLength === null) {
-      alert("Invalid input. Tweet must not be empty. Please try again.");
+      $(".error-container").slideDown();
+      $(".error-message").html("<i class='fas error fa-exclamation-circle'></i> <span>Invalid Error: you must type something to tweet!</span>");
     } else if (inputLength > 140) {
-      alert("Your tweet is too long! Please shorten it and try again.");
+      $(".error-container").slideDown();
+      $(".error-message").html("<i class='fas error fa-exclamation-circle'> <span>Your tweet is too long! Please shorten it and try again.</span>");
     } else {
-      console.log("Button works");
+      $(".error-container").slideUp();
+      // console.log("Button works");
       let $formData = $form.serialize();
-      console.log($formData);
+      // console.log($formData);
       $.ajax({
         url: '/tweets',
         method: 'POST',
