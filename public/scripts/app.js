@@ -3,24 +3,23 @@ const tweetData = [
 ];
 
 function loadTweets() {
-    $.ajax({
-      url: 'tweets',
-      method: "GET",
-      success: data => {
-        renderTweets(data);
-      },
-      failure: error => {
-        console.log(error);
-      }
-    });
+  $.ajax({
+    url: '/tweets',
+    method: "GET",
+    success: data => {
+      $("#tweet-box").empty()
+      renderTweets(data);
+    },
+    failure: error => {
+      console.log(error);
+    }
+  });
 }
-loadTweets();
-
 
 function renderTweets(tweets) {
   for(let tweet in tweets){
     let $tweet = createTweetElement(tweets[tweet]);
-    $('.container').append($tweet);
+    $('#tweet-box').prepend($tweet);
   }
 }
 
@@ -57,11 +56,38 @@ function createTweetElement(tweetData) {
   img.attr("src", tweetData.user.avatars.small);
 
   return section;
-
 }
 
 $(() => {
-  renderTweets(tweetData);
+  let $form = $('#tweet-form');
+  $form.on('submit', () => {
+    event.preventDefault();
+    let inputLength = $("#tweet-input").val().length;
+    if(inputLength === 0 || inputLength === null) {
+      alert("Invalid input. Tweet must not be empty. Please try again.");
+    } else if (inputLength > 140) {
+      alert("Your tweet is too long! Please shorten it and try again.");
+    } else {
+      console.log("Button works");
+      let $formData = $form.serialize();
+      console.log($formData);
+      $.ajax({
+        url: '/tweets',
+        method: 'POST',
+        data: $formData,
+        success: data => {
+          loadTweets();
+        },
+        failure: error => {
+          console.log(error);
+        }
+      });
+    }
+  });
+});
+
+$(() => {
+  loadTweets();
 });
 
 
