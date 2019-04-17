@@ -49,16 +49,24 @@ function createTweetElement(tweetData) {
   article.append(footer);
   section.append(article);
 
-  h2.html(tweetData.user.name);
-  spanOne.html(tweetData.user.handle);
-  p.html(tweetData.content.text);
-  spanTwo.html(tweetData.created_at);
+  h2.text(tweetData.user.name);
+  spanOne.text(tweetData.user.handle);
+  p.text(tweetData.content.text);
+  spanTwo.text(tweetData.created_at);
   img.attr("src", tweetData.user.avatars.small);
 
   return section;
 }
 
+
 $(() => {
+  loadTweets();
+  $("#new-tweetbox").hide();
+  $("#nav-button").on("click", function() {
+    $("#new-tweetbox").slideToggle('slow');
+    $("#tweet-input").focus();
+  });
+
   let $form = $('#tweet-form');
   $form.on('submit', () => {
     event.preventDefault();
@@ -86,9 +94,6 @@ $(() => {
   });
 });
 
-$(() => {
-  loadTweets();
-});
 
 
 
