@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+$(function() {
+  var $button = $('#tweet-button');
+  $button.on('submit', function () {
+    console.log("Button works");
+    $.ajax('index.html', { method: 'POST' })
+    .then(function (event) {
+      console.log("Success:", event);
+      $button.replaceWith(event);
+      event.reventDefault();
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>
