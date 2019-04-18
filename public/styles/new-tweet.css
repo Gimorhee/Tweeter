@@ -44,11 +44,7 @@ article.tweet-article {
   background-color: white;
   opacity: 0.5;
 }
-
 article.tweet-article:hover {
-  border: 2px solid #00a087;
-  border-radius: 15px;
-  background-color: white;
   opacity: 1;
 }
 

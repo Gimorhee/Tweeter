@@ -21,17 +21,18 @@
   float: left;
 }
 
-#nav-bar .navbar-button {
-  width: 150px;
-  height: 50px;
-  float: right;
-  margin-top: 15px;
-  border-radius: 15px;
-  color: #00a087;
-  font-size: 20px;
-}
-#nav-bar .navbar-button:hover {
-  font-size: 27px;
-}
+#nav-bar {
+  .navbar-button {
+    width: 150px;
+    height: 50px;
+    float: right;
+    margin-top: 15px;
+    border-radius: 15px;
+    color: #00a087;
+    font-size: 20px;
 
-/*# sourceMappingURL=nav.css.map */
+    &:hover {
+      font-size: 27px;
+    }
+  }
+}

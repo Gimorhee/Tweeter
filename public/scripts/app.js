@@ -1,7 +1,9 @@
+//Database
 const tweetData = [
 
 ];
 
+//Using AJAX, loading tweets and errors
 function loadTweets() {
   $.ajax({
     url: '/tweets',
@@ -16,6 +18,7 @@ function loadTweets() {
   });
 }
 
+//For each content of the tweet databases, create tweets and post it by the time of the post.
 function renderTweets(tweets) {
   for(let tweet in tweets){
     let $tweet = createTweetElement(tweets[tweet]);
@@ -23,6 +26,7 @@ function renderTweets(tweets) {
   }
 }
 
+//Appending all attributes to the tweet container where the tweet will be posted.
 function createTweetElement(tweetData) {
 
   let section = $("<section>").addClass("tweet-container");
@@ -59,7 +63,8 @@ function createTweetElement(tweetData) {
   return section;
 }
 
-
+//When the document is ready, load all of original tweets. Tweet box is hidden and show up again when the compose button is clicked.
+//Checking up tweet-validation and posting/loading the tweets by using AJAX.
 $(() => {
   loadTweets();
   $("#new-tweetbox").hide();

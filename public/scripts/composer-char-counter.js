@@ -1,4 +1,5 @@
-$(document).ready(function() {
+//Counter validation feature.
+$(() => {
   $("textarea").on("input", function() {
 
    let numberOfLetters = $(this).val().length;
