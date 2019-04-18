@@ -75,8 +75,13 @@ $(() => {
 
   $(".error-container").hide();
 
+
+  $("#tweet-box").on("click", ".fa-heart", (event) => {
+    $(event.target).toggleClass("likeColor");
+  });
+
   let $form = $('#tweet-form');
-  $form.on('submit', () => {
+  $form.on("submit", () => {
     event.preventDefault();
     let inputLength = $("#tweet-input").val().length;
     if(inputLength === 0 || inputLength === null) {

@@ -40,8 +40,7 @@ section.tweet-container {
   padding-bottom: 20px;
 }
 
-article {
-  &.tweet-article {
+article.tweet-article {
     border: 2px solid $primary-color;
     border-radius: 15px;
     background-color: white;
@@ -50,8 +49,17 @@ article {
     &:hover {
       opacity: 1;
     }
+    &:hover i.fas {
+      float: right;
+      padding: 5px;
+      color: $primary-color;
+      opacity: 1;
+
+      &.likeColor {
+        color: red;
+      }
+    }
   }
-}
 
 header.tweet-header {
   border-top-left-radius: 15px;
@@ -94,12 +102,7 @@ i.fas {
   opacity: 0;
 }
 
-article.tweet-article:hover i.fas  {
-  float: right;
-  padding: 5px;
-  color: $primary-color;
-  opacity: 1;
-}
+
 
 p.tweet-content {
   padding: 10px;
@@ -127,6 +130,6 @@ i.fas.error {
   float: none;
   color: red;
   font-size: 15px;
-
 }
+
 

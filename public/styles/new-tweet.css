@@ -47,6 +47,15 @@ article.tweet-article {
 article.tweet-article:hover {
   opacity: 1;
 }
+article.tweet-article:hover i.fas {
+  float: right;
+  padding: 5px;
+  color: #00a087;
+  opacity: 1;
+}
+article.tweet-article:hover i.fas.likeColor {
+  color: red;
+}
 
 header.tweet-header {
   border-top-left-radius: 15px;
@@ -87,13 +96,6 @@ i.fas {
   padding: 5px;
   color: #00a087;
   opacity: 0;
-}
-
-article.tweet-article:hover i.fas {
-  float: right;
-  padding: 5px;
-  color: #00a087;
-  opacity: 1;
 }
 
 p.tweet-content {
