@@ -24,6 +24,7 @@ function renderTweets(tweets) {
 }
 
 function createTweetElement(tweetData) {
+
   let section = $("<section>").addClass("tweet-container");
   let article = $("<article>").addClass("tweet-article");
   let header = $("<header>").addClass("tweet-header");
@@ -49,11 +50,11 @@ function createTweetElement(tweetData) {
   article.append(footer);
   section.append(article);
 
+  img.attr("src", tweetData.user.avatars.small);
   h2.text(tweetData.user.name);
   spanOne.text(tweetData.user.handle);
   p.text(tweetData.content.text);
-  spanTwo.text(tweetData.created_at);
-  img.attr("src", tweetData.user.avatars.small);
+  spanTwo.text(moment(tweetData.created_at).fromNow());
 
   return section;
 }
