@@ -55,7 +55,7 @@ article.tweet-article:hover {
 header.tweet-header {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  background-color: #ececec;
+  background-color: #ececec
 }
 
 h2.tweetname {
@@ -93,7 +93,7 @@ i.fas {
   opacity: 0;
 }
 
-article.tweet-article:hover i.fas {
+article.tweet-article:hover i.fas  {
   float: right;
   padding: 5px;
   color: #00a087;
@@ -126,6 +126,6 @@ i.fas.error {
   float: none;
   color: red;
   font-size: 15px;
+
 }
 
-/*# sourceMappingURL=new-tweet.css.map */

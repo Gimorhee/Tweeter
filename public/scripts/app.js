@@ -82,9 +82,7 @@ $(() => {
       $(".error-message").html("<i class='fas error fa-exclamation-circle'> <span>Your tweet is too long! Please shorten it and try again.</span>");
     } else {
       $(".error-container").slideUp();
-      // console.log("Button works");
       let $formData = $form.serialize();
-      // console.log($formData);
       $.ajax({
         url: '/tweets',
         method: 'POST',
