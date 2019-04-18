@@ -62,7 +62,7 @@ function createTweetElement(tweetData) {
 $(() => {
   loadTweets();
   $("#new-tweetbox").hide();
-  $("#nav-button").on("click", function() {
+  $("#nav-button").on("click", () => {
     $("#new-tweetbox").slideToggle('slow');
     $("#tweet-input").focus();
   });
