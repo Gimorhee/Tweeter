@@ -12,7 +12,7 @@ function loadTweets() {
       $("#tweet-box").empty()
       renderTweets(data);
     },
-    failure: error => {
+    failure: error => {k,
       console.log(error);
     }
   });

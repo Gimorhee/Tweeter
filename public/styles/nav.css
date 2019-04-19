@@ -34,4 +34,23 @@
   font-size: 27px;
 }
 
+/*Responsive Design (stretch)*/
+@media (max-width: 440px) {
+  #nav-bar .navbar-button {
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    margin-top: 25px;
+  }
+  #nav-bar .navbar-button:hover {
+    font-size: 16px;
+  }
+
+  #nav-bar .logo {
+    width: 60px;
+    height: 60px;
+    margin-top: 12px;
+  }
+}
+
 /*# sourceMappingURL=nav.css.map */
