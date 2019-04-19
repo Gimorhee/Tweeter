@@ -89,7 +89,7 @@ $(() => {
       $(".error-message").html("<i class='fas error fa-exclamation-circle'></i> <span>Invalid Error: you must type something to tweet!</span>");
     } else if (inputLength > 140) {
       $(".error-container").slideDown();
-      $(".error-message").html("<i class='fas error fa-exclamation-circle'> <span>Your tweet is too long! Please shorten it and try again.</span>");
+      $(".error-message").html("<i class='fas error fa-exclamation-circle'></i> <span>Your tweet is too long! Please shorten it and try again!</span>");
     } else {
       $(".error-container").slideUp();
       let $formData = $form.serialize();
