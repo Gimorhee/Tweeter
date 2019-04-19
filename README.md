@@ -5,10 +5,10 @@ Tweeter is a simple, single-page Twitter clone.
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
 
 ##Final Product
-!["tweet_page1"](https://github.com/Gimorhee/TinyApp/blob/master/img/Login_Page.png)
-!["tweet_page2"](https://github.com/Gimorhee/TinyApp/blob/master/img/URL_Page.png)
-!["error_message1"](https://github.com/Gimorhee/TinyApp/blob/master/img/URL_Page.png)
-!["errror_message2"](https://github.com/Gimorhee/TinyApp/blob/master/img/URL_Page.png)
+!["tweet_page1"](https://github.com/Gimorhee/Tweeter./blob/master/public/images/tweet_page1.png)
+!["tweet_page2"](https://github.com/Gimorhee/Tweeter./blob/master/public/images/tweet_page2.png)
+!["error_message1"](https://github.com/Gimorhee/Tweeter./blob/master/public/images/error_message1.png)
+!["errror_message2"](https://github.com/Gimorhee/Tweeter./blob/master/public/images/error_message2.png)
 
 ## Getting Started
 
