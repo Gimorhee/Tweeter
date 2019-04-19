@@ -115,14 +115,14 @@ p.error-message {
   padding-top: 10px;
   font-size: 15px;
   font-weight: 900;
-  background-color: pink;
-  color: red;
+  background-color: red;
+  color: white;
 }
 
 i.fas.error {
   opacity: 1;
   float: none;
-  color: red;
+  color: white;
   font-size: 15px;
 }
 
