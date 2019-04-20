@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone where users can post their tweet up to 140 lengths. HTML, CSS, JS, jQuery and AJAX are used for front-end, and Node, Express and MongoDB are used for the Back-end.
+Tweeter is a simple, single-page Twitter clone where users can post their tweets up to 140 length. HTML, CSS, JS, jQuery and AJAX are used for front-end, and Node, Express and MongoDB are used for the Back-end.
 
 ## Final Product
 !["tweet_page1"](https://github.com/Gimorhee/Tweeter./blob/master/public/images/tweet_page1.png)
