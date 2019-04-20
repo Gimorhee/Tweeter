@@ -7,6 +7,7 @@ const md5 = require('md5');
 
 module.exports = {
 
+  //Generating random user with info.
   generateRandomUser: () => {
     const gender    = chance.gender();
     const firstName = chance.first({gender: gender});
